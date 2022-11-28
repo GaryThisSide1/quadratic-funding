@@ -1,0 +1,87 @@
+{
+	"ABI version": 2,
+	"version": "2.3",
+	"header": ["time", "expire"],
+	"functions": [
+		{
+			"name": "constructor",
+			"inputs": [
+				{"name":"Matching_value","type":"uint128"},
+				{"name":"_startt","type":"uint256"},
+				{"name":"_endt","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "project",
+			"inputs": [
+				{"name":"name","type":"string"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "withdraw",
+			"inputs": [
+				{"name":"nam","type":"string"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "deposit",
+			"inputs": [
+				{"name":"i","type":"uint256"},
+				{"name":"name","type":"string"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "projects",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"projects","type":"map(address,string)"}
+			]
+		},
+		{
+			"name": "numberOfProjectOfEachAddress",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"numberOfProjectOfEachAddress","type":"map(address,uint256)"}
+			]
+		},
+		{
+			"name": "arr",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"arr","type":"string[]"}
+			]
+		}
+	],
+	"data": [
+	],
+	"events": [
+	],
+	"fields": [
+		{"name":"_pubkey","type":"uint256"},
+		{"name":"_timestamp","type":"uint64"},
+		{"name":"_constructorFlag","type":"bool"},
+		{"name":"matchingvaluee","type":"uint128"},
+		{"name":"projects","type":"map(address,string)"},
+		{"name":"numberOfProjectOfEachAddress","type":"map(address,uint256)"},
+		{"name":"numberOfProjects","type":"optional(cell)"},
+		{"name":"NumbersOfFunder","type":"optional(cell)"},
+		{"name":"fundsOfEachProject","type":"optional(cell)"},
+		{"name":"total","type":"uint256"},
+		{"name":"balance","type":"uint128"},
+		{"name":"owner","type":"address"},
+		{"name":"start","type":"uint256"},
+		{"name":"end","type":"uint256"},
+		{"name":"arr","type":"string[]"}
+	]
+}

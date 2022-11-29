@@ -19,14 +19,14 @@ contract Wallet {
 	
     constructor(uint128 Matching_value,uint _startt,uint _endt) public {
         
-		start=_startt;
-		end=_endt;
-		matchingvaluee=Matching_value;
+	start=_startt;
+	end=_endt;
+	matchingvaluee=Matching_value;
         require(tvm.pubkey() != 0, 101);
         
         require(msg.pubkey() == tvm.pubkey(), 102);
 		
-		owner=msg.sender;
+	owner=msg.sender;
         tvm.accept();
     }
 
@@ -36,9 +36,9 @@ contract Wallet {
         require(msg.pubkey() == tvm.pubkey(), 100);
 
 		
-		tvm.accept();
-		_;
-	}
+	tvm.accept();
+	_;
+}
     modifier onlyOwner {
         require(msg.pubkey() == tvm.pubkey(), 102);
         tvm.accept();
@@ -46,7 +46,7 @@ contract Wallet {
     }
     
 	function project(string name) public checkOwnerAndAccept{
-		numberOfProjectOfEachAddress[msg.sender]+=1;
+	   numberOfProjectOfEachAddress[msg.sender]+=1;
 	   projects[msg.sender]=name;
 	   numberOfProjects[name]+=1;
 	}

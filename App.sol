@@ -55,9 +55,9 @@ contract Wallet {
 		require(block.timestamp>start,404);
 		require(block.timestamp<end,403);
 		require(projects[msg.sender]==nam);
-		uint i=NumbersOfFunder[nam]/total;
+		uint i=NumbersOfFunder[nam]*matchingvaluee;
 		tvm.accept();
-		msg.sender.transfer(uint128(i*matchingvaluee));
+		msg.sender.transfer(uint128(i/total));
 		NumbersOfFunder[nam]=0;
 		total-=1;
 	}
